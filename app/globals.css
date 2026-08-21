@@ -11,15 +11,21 @@ a { color: inherit; text-decoration: none; }
 .site-header { height: 88px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid var(--line); }
 .site-header-compact { height: 76px; }
 .wordmark { font: 800 25px/1 var(--font-geist-sans), sans-serif; letter-spacing: -.07em; }
+.wordmark-full { letter-spacing: -.055em; }
+.wordmark-short { display: none; }
 .wordmark-dot { color: var(--blue); }
 nav { display: flex; gap: 32px; font-size: 13px; font-weight: 700; }
 nav a, .header-cta { transition: opacity .2s ease; }
 nav a:hover, .header-cta:hover { opacity: .55; }
 .header-cta { justify-self: end; font-size: 13px; font-weight: 700; display: flex; gap: 8px; }
-.hero { min-height: 690px; padding: 72px 0 78px; display: flex; flex-direction: column; justify-content: space-between; }
+.hero { min-height: 820px; padding: 66px 0 72px; display: flex; flex-direction: column; justify-content: space-between; }
 .hero-core { margin-top: 42px; }
 .hero-role { margin: 0; color: var(--blue); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .hero-core h1 { margin-top: 28px; }
+.hero-core .name-heading { max-width: none; margin: 25px 0 0; font-size: clamp(90px, 13.8vw, 178px); line-height: .8; letter-spacing: -.085em; white-space: nowrap; }
+.name-dot { color: var(--blue); }
+.brand-thesis { max-width: 920px; margin: 54px 0 0 auto; font: 500 clamp(38px, 5.4vw, 68px)/.98 var(--font-geist-sans), sans-serif; letter-spacing: -.06em; }
+.brand-thesis em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: var(--blue); }
 .eyebrow { display: flex; align-items: center; gap: 9px; text-transform: uppercase; font-size: 11px; font-weight: 800; letter-spacing: .14em; }
 .eyebrow span { width: 8px; height: 8px; border-radius: 50%; background: #36a967; box-shadow: 0 0 0 5px rgba(54,169,103,.12); }
 h1 { max-width: 1040px; margin: 50px 0 75px; font: 500 clamp(62px, 8.7vw, 132px)/.88 var(--font-geist-sans), sans-serif; letter-spacing: -.078em; }
@@ -358,10 +364,13 @@ footer { background: var(--ink); color: white; }
   .site-header, .site-header-compact { grid-template-columns: auto 1fr; gap: 22px; height: 72px; }
   .site-header nav { display: flex; justify-content: flex-end; gap: 16px; font-size: 11px; }
   .site-header .header-cta { display: none; }
+  .wordmark-full { display: none; }
+  .wordmark-short { display: inline; }
   .hero { padding-top: 42px; }
   .hero-core { margin-top: 36px; }
   .hero-role { font-size: 9px; }
-  .hero-core h1 { font-size: clamp(50px, 15vw, 78px); }
+  .hero-core .name-heading { font-size: clamp(63px, 19vw, 100px); white-space: normal; }
+  .brand-thesis { margin-top: 36px; font-size: clamp(37px, 11vw, 56px); }
   .hero-focus { margin-top: 35px; }
   .leverage-section { padding-top: 80px; }
   .insights-section { padding: 80px 0; }

@@ -6,7 +6,7 @@ export function SiteHeader({ compact = false }: { compact?: boolean }) {
   return (
     <header className={`site-header shell${compact ? " site-header-compact" : ""}`}>
       <Link className="wordmark" href="/" aria-label="Aman Sinha, home">
-        AS<span className="wordmark-dot">.</span>
+        <span className="wordmark-full">Aman Sinha</span><span className="wordmark-short" aria-hidden="true">AS</span><span className="wordmark-dot">.</span>
       </Link>
       <nav aria-label="Primary navigation">
         <Link href="/#work">Work</Link>

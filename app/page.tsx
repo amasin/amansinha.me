@@ -60,10 +60,11 @@ export default function Home() {
         <div className="eyebrow"><span /> Bengaluru · Enterprise platforms · AI &amp; automation</div>
         <div className="hero-core">
           <p className="hero-role">Senior product manager and platform product leader</p>
-          <h1>Product clarity for systems that <em>cannot afford confusion.</em></h1>
+          <h1 className="name-heading"><span>Aman Sinha<span className="name-dot">.</span></span></h1>
+          <p className="brand-thesis">Product clarity for systems that <em>cannot afford confusion.</em></p>
         </div>
         <div className="hero-bottom">
-          <p>I&apos;m Aman Sinha. I turn high-stakes enterprise technology into clear product choices, adopted workflows, and measurable customer and business outcomes.</p>
+          <p>I turn high-stakes enterprise technology into clear product choices, adopted workflows, and measurable customer and business outcomes.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">Explore product impact <span>↓</span></a>
             <a className="button button-secondary" href="/resume">View résumé <Arrow /></a>

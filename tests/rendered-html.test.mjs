@@ -17,6 +17,7 @@ test("server-renders a positioned and discoverable product portfolio", async () 
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Aman Sinha/);
+  assert.match(html, /<h1 class="name-heading"><span>Aman Sinha/);
   assert.match(html, /Product clarity for systems/);
   assert.match(html, /Senior product manager and platform product leader/i);
   assert.match(html, /Selected product work/);

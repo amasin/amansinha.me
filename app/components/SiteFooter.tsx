@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer>
       <div className="shell footer-grid">
         <Link className="wordmark footer-mark" href="/" aria-label="Aman Sinha, home">
-          AS<span className="wordmark-dot">.</span>
+          Aman Sinha<span className="wordmark-dot">.</span>
         </Link>
         <p>Product leadership · Platform strategy · AI-powered transformation</p>
         <div>
