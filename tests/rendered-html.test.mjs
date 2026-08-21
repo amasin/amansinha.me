@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-async function render(path = "/") {
+async function render(path = "/", origin = "http://localhost") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${path}`);
   const { default: worker } = await import(workerUrl.href);
   return worker.fetch(
-    new Request(`http://localhost${path}`, { headers: { accept: "text/html" } }),
+    new Request(`${origin}${path}`, { headers: { accept: "text/html" } }),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} },
   );
@@ -91,5 +91,15 @@ test("exposes crawl instructions and the full route inventory", async () => {
   const robots = await robotsResponse.text();
   assert.match(robots, /Allow: \//);
   assert.match(robots, /Sitemap: https:\/\/amansinha\.me\/sitemap\.xml/);
+});
+
+test("redirects insecure and www production requests to the canonical domain", async () => {
+  const insecureResponse = await render("/insights?source=test", "http://amansinha.me");
+  assert.equal(insecureResponse.status, 301);
+  assert.equal(insecureResponse.headers.get("location"), "https://amansinha.me/insights?source=test");
+
+  const wwwResponse = await render("/resume", "https://www.amansinha.me");
+  assert.equal(wwwResponse.status, 301);
+  assert.equal(wwwResponse.headers.get("location"), "https://amansinha.me/resume");
 });
 

@@ -28,6 +28,15 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    if (
+      (url.hostname === "amansinha.me" && url.protocol === "http:") ||
+      url.hostname === "www.amansinha.me"
+    ) {
+      url.protocol = "https:";
+      url.hostname = "amansinha.me";
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       return handleImageOptimization(request, {
@@ -44,3 +53,4 @@ const worker = {
 };
 
 export default worker;
+
