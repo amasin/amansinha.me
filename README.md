@@ -6,9 +6,11 @@ Professional product-management portfolio for Aman Sinha. The site presents meas
 
 - Outcome-led portfolio homepage
 - Four product case studies with route-specific social metadata
+- Three original Product Notes and an Insights hub for ongoing authority building
 - Detailed, print-friendly résumé
 - Responsive and accessible layout
-- Open Graph image, sitemap, robots metadata, and Person structured data
+- Open Graph image, canonical URLs, sitemap, robots metadata, AI-readable `llms.txt`, and page-specific structured data
+- Visitor-friendly 404 page and clear recruiter/hiring-team journey
 - Cloudflare Worker-compatible build through vinext and the Cloudflare Vite plugin
 
 ## Local development
@@ -52,7 +54,9 @@ After the first deployment, attach `amansinha.me` as the Worker custom domain in
 
 - `app/page.tsx` — portfolio homepage
 - `app/work/case-studies.ts` — authoritative case-study content
+- `app/insights/insights.ts` — authoritative Product Notes content
 - `app/resume/page.tsx` — résumé
 - `app/globals.css` — visual system and responsive/print styles
 - `public/og.png` — social preview image
+- `BRAND_GROWTH_PLAYBOOK.md` — post-launch publishing, distribution, and measurement plan
 

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PrintButton } from "./PrintButton";
+import { SiteFooter } from "../components/SiteFooter";
+import { SiteHeader } from "../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Résumé — Aman Sinha",
   description: "Aman Sinha's product leadership experience, platform impact, education, and credentials.",
-  openGraph: { title: "Résumé — Aman Sinha", description: "15+ years of product, platform, automation, and enterprise technology leadership.", images: [] },
+  alternates: { canonical: "https://amansinha.me/resume" },
+  openGraph: { type: "profile", url: "https://amansinha.me/resume", title: "Résumé — Aman Sinha", description: "15+ years of product, platform, automation, and enterprise technology leadership.", images: [] },
   twitter: { title: "Résumé — Aman Sinha", description: "15+ years of product, platform, automation, and enterprise technology leadership.", images: [] },
 };
 
@@ -63,16 +65,13 @@ const roles = [
 export default function ResumePage() {
   return (
     <main className="resume-page">
-      <header className="site-header shell">
-        <Link className="wordmark" href="/">AS<span className="wordmark-dot">.</span></Link>
-        <Link className="back-link" href="/">← Portfolio</Link>
-        <a className="header-cta" href="mailto:aman.ismu@gmail.com">Contact ↗</a>
-      </header>
+      <a className="skip-link" href="#resume-content">Skip to résumé</a>
+      <SiteHeader compact />
       <section className="resume-hero shell">
         <div><span className="eyebrow">Product · Platform · Transformation</span><h1>Aman Sinha</h1></div>
         <div><p>Product and platform leader with 15+ years turning complex enterprise systems into measurable customer and business outcomes.</p><PrintButton /></div>
       </section>
-      <div className="resume-content shell">
+      <div className="resume-content shell" id="resume-content">
         <aside className="resume-aside">
           <section><h2>Contact</h2><a href="mailto:aman.ismu@gmail.com">aman.ismu@gmail.com</a><a href="https://www.linkedin.com/in/amansin">linkedin.com/in/amansin</a><a href="https://github.com/amasin">github.com/amasin</a><p>Whitefield, Bengaluru</p></section>
           <section><h2>Product leadership</h2><ul><li>Strategy & roadmaps</li><li>Customer discovery</li><li>OKRs & product metrics</li><li>Prioritization & PRDs</li><li>Platform lifecycle</li><li>Adoption & cost-to-serve</li></ul></section>
@@ -85,6 +84,8 @@ export default function ResumePage() {
           <section><h2>Experience</h2>{roles.map(role => <article className="resume-role" key={`${role.company}-${role.dates}`}><div className="resume-role-heading"><div><h3>{role.company}</h3><em>{role.title}</em></div><span>{role.dates}</span></div><ul>{role.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul></article>)}</section>
         </div>
       </div>
+      <SiteFooter />
     </main>
   );
 }
+
