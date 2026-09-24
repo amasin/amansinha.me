@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/work/enterprise-voice", changeFrequency: "yearly" as const, priority: .85 },
     { path: "/work/platform-automation", changeFrequency: "yearly" as const, priority: .85 },
     { path: "/work/usage-intelligence", changeFrequency: "yearly" as const, priority: .85 },
-    { path: "/work/billzwise", changeFrequency: "yearly" as const, priority: .8 },
+    { path: "/work/consumer-intelligence", changeFrequency: "yearly" as const, priority: .8 },
     { path: "/insights/platform-product-decisions", changeFrequency: "yearly" as const, priority: .8 },
     { path: "/insights/internal-product-adoption", changeFrequency: "yearly" as const, priority: .8 },
     { path: "/insights/automation-human-judgment", changeFrequency: "yearly" as const, priority: .8 },
