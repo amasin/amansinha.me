@@ -15,7 +15,7 @@ Aman Sinha has 15+ years across product ownership, platform strategy, engineerin
 - [Enterprise voice as a product](https://amansinha.me/work/enterprise-voice): Platform strategy and operating model at global enterprise scale.
 - [Platform automation](https://amansinha.me/work/platform-automation): Internal-product strategy for governed automation.
 - [Usage intelligence](https://amansinha.me/work/usage-intelligence): Data products for platform economics and lifecycle decisions.
-- [BillzWise](https://amansinha.me/work/billzwise): Independent consumer bill-intelligence product strategy.
+- [Consumer bill intelligence](https://amansinha.me/work/consumer-intelligence): Independent consumer bill-intelligence product strategy.
 
 ## Contact and profiles
 
