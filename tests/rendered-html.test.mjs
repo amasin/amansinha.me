@@ -41,7 +41,7 @@ test("renders independently shareable case-study metadata", async () => {
   assert.match(html, /og:title/);
   assert.doesNotMatch(html, /og\.png/);
 
-  const secondResponse = await render("/work/billzwise");
+  const secondResponse = await render("/work/consumer-intelligence");
   assert.equal(secondResponse.status, 200);
   const secondHtml = await secondResponse.text();
   assert.match(secondHtml, /broad AI toolkit to one sharp customer promise/);
