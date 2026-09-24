@@ -148,8 +148,8 @@ export default function Home() {
             <div className="case-copy">
               <span className="outcome-chip">Web · Mobile · Backend</span>
               <h3>Narrowing a broad toolkit to one customer promise</h3>
-              <p>Focused BillzWise on evidence-led bill intelligence and aligned product, trust, data, and experience around one job to be done.</p>
-              <a href="/work/billzwise">See decisions and trade-offs <Arrow /></a>
+              <p>Focused an independent consumer product on evidence-led bill intelligence and aligned product, trust, data, and experience around one job to be done.</p>
+              <a href="/work/consumer-intelligence">See decisions and trade-offs <Arrow /></a>
             </div>
           </article>
         </div>
