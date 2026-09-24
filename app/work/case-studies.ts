@@ -112,10 +112,10 @@ export const caseStudies: Record<string, CaseStudy> = {
     evidenceNote: "The narrative is sanitized and figures are approximate. Screens and underlying data cannot be shared because they belong to a regulated enterprise environment.",
     reflection: "A dashboard is not a data product unless it changes a decision. Starting from the decision—not the available data—kept the work focused on value.",
   },
-  billzwise: {
-    slug: "billzwise", index: "04", eyebrow: "Independent build · Consumer fintech",
+  "consumer-intelligence": {
+    slug: "consumer-intelligence", index: "04", eyebrow: "Independent build · Consumer fintech",
     title: "From a broad AI toolkit to one sharp customer promise.",
-    summary: "Repositioning BillzWise around a focused job: upload a bill, understand whether the price appears fair, and see what to do next.",
+    summary: "Repositioning an independent consumer product around a focused job: upload a bill, understand whether the price appears fair, and see what to do next.",
     role: "Product strategy & build", timeline: "2026", scale: "Web · Mobile · Backend",
     contribution: "Owned product positioning, information architecture, evidence model, cross-surface prioritization, and hands-on implementation decisions for the independent product.",
     customer: "People trying to understand whether a household bill or receipt appears fair and what evidence-backed action they can take next.",
@@ -139,7 +139,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       { value: "3", label: "surfaces aligned: web, mobile, backend" },
     ],
     demonstrates: ["Zero-to-one product strategy", "Consumer trust", "Information architecture", "AI product judgment", "Hands-on building"],
-    evidenceNote: "BillzWise is an independent product exploration. Outcome metrics shown here describe product scope and strategic focus rather than commercial traction.",
+    evidenceNote: "This is an independent product exploration. Outcome metrics shown here describe product scope and strategic focus rather than commercial traction.",
     reflection: "Focus is a product feature. Removing ambiguity from the promise made every downstream decision—data, UX, trust, and roadmap—easier to evaluate.",
   },
 };
