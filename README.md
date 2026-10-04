@@ -5,7 +5,7 @@ Professional product-management portfolio for Aman Sinha. The site presents meas
 ## What is included
 
 - Outcome-led portfolio homepage
-- Four product case studies with route-specific social metadata
+- Seven product case studies with route-specific social metadata
 - Three original Product Notes and an Insights hub for ongoing authority building
 - Detailed, print-friendly résumé
 - Responsive and accessible layout

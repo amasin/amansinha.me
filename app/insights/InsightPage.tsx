@@ -29,7 +29,7 @@ export function InsightPage({ insight }: { insight: Insight }) {
           <p>{insight.standfirst}</p>
         </header>
         <div className="article-layout shell">
-          <aside><span>Written by</span><strong>Aman Sinha</strong><p>Senior product and platform leader in Bengaluru.</p><a href="/resume">View résumé →</a></aside>
+          <aside><span>Written by</span><strong>Aman Sinha</strong><p>Lead Digital Product Manager, VP · Wells Fargo.</p><a href="/resume">View résumé →</a></aside>
           <div className="article-body">
             {insight.sections.map(section => <section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}{section.points && <ul>{section.points.map(point => <li key={point}>{point}</li>)}</ul>}</section>)}
             <blockquote><span>The takeaway</span>{insight.takeaway}</blockquote>

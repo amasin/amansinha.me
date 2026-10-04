@@ -4,11 +4,13 @@ The website is the owned home for Aman Sinha's professional brand. It should mak
 
 ## Positioning
 
-**Category:** Senior product manager and platform product leader
+**Current designation:** Lead Digital Product Manager, VP — Wells Fargo
+
+**Category:** Product leader for enterprise platforms and AI automation
 
 **Distinctive territory:** Enterprise platforms where customer experience, technology, risk, adoption, and economics must work together
 
-**Core message:** Product clarity for systems that cannot afford confusion
+**Core message:** Enterprise platforms. Measurable product impact.
 
 **Best-fit opportunities:** Enterprise SaaS, fintech and banking, platform products, AI-powered operations, internal products, and complex customer-experience platforms
 
@@ -41,7 +43,7 @@ Do not publish merely to maintain frequency. A smaller body of useful, original 
 ## Distribution
 
 - Add `amansinha.me` to the LinkedIn headline/contact section and Feature the strongest case study or Product Note.
-- Add the website to the GitHub profile and email signature.
+- Add the website to professional email signatures.
 - Link relevant articles naturally in recruiter conversations and interviews.
 - Ask trusted former colleagues to share specific public recommendations on LinkedIn; do not copy private praise onto the site without permission.
 - Seek a small number of relevant backlinks through guest posts, product communities, alumni networks, and conference or meetup contributions.

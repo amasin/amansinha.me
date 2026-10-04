@@ -1,10 +1,11 @@
+import { profile } from "./profile";
 import type { Metadata } from "next";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: { absolute: "Aman Sinha | Senior Product Manager, Enterprise Platforms & AI" },
-  description: "Senior product and platform leader in Bengaluru with 15+ years turning enterprise systems, AI automation, and data into trusted products and measurable outcomes.",
+  title: { absolute: profile.title },
+  description: profile.description,
   alternates: { canonical: "https://amansinha.me/" },
 };
 
@@ -20,7 +21,8 @@ export default function Home() {
         name: "Aman Sinha",
         url: "https://amansinha.me",
         image: "https://amansinha.me/og.png",
-        jobTitle: "Senior Product and Platform Leader",
+        jobTitle: profile.designation,
+        worksFor: { "@type": "Organization", name: "Wells Fargo" },
         description: "Product leader focused on enterprise platforms, AI-powered automation, data products, and customer experience.",
         address: { "@type": "PostalAddress", addressLocality: "Bengaluru", addressCountry: "IN" },
         alumniOf: [
@@ -28,7 +30,7 @@ export default function Home() {
           { "@type": "CollegeOrUniversity", name: "IIT (ISM) Dhanbad" },
         ],
         knowsAbout: ["Product strategy", "Platform product management", "Enterprise SaaS", "AI automation", "Data products", "Customer experience", "Product operations"],
-        sameAs: ["https://www.linkedin.com/in/amansin", "https://github.com/amasin"],
+        sameAs: ["https://www.linkedin.com/in/amansin"],
       },
       {
         "@type": "WebSite",
@@ -42,7 +44,7 @@ export default function Home() {
         "@type": "ProfilePage",
         "@id": "https://amansinha.me/#profile",
         url: "https://amansinha.me",
-        name: "Aman Sinha | Senior Product Manager, Enterprise Platforms & AI",
+        name: profile.title,
         mainEntity: { "@id": "https://amansinha.me/#person" },
         isPartOf: { "@id": "https://amansinha.me/#website" },
         inLanguage: "en-IN",
@@ -59,12 +61,12 @@ export default function Home() {
       <section className="hero shell" id="top">
         <div className="eyebrow"><span /> Bengaluru · Enterprise platforms · AI &amp; automation</div>
         <div className="hero-core">
-          <p className="hero-role">Senior product manager and platform product leader</p>
+          <p className="hero-role">Lead Digital Product Manager, VP · Wells Fargo</p>
           <h1 className="name-heading"><span>Aman Sinha<span className="name-dot">.</span></span></h1>
-          <p className="brand-thesis">Product clarity for systems that <em>cannot afford confusion.</em></p>
+          <p className="brand-thesis">Enterprise platforms.<br /><em>Measurable product impact.</em></p>
         </div>
         <div className="hero-bottom">
-          <p>I turn high-stakes enterprise technology into clear product choices, adopted workflows, and measurable customer and business outcomes.</p>
+          <p>I own product strategy, roadmaps, and modernization for enterprise platforms at global scale. I bring 15+ years of technical depth to product decisions—and build independent AI products from idea to implementation.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">Explore product impact <span>↓</span></a>
             <a className="button button-secondary" href="/resume">View résumé <Arrow /></a>
@@ -80,7 +82,7 @@ export default function Home() {
           <div><strong>200K+</strong><span>endpoints at global scale</span></div>
           <div><strong>$8M+</strong><span>efficiencies and cost avoidance</span></div>
           <div><strong>34M+</strong><span>voice minutes each month</span></div>
-          <div><strong>100+</strong><span>engineers aligned across 8 teams</span></div>
+          <div><strong>15+</strong><span>years across technology and product delivery</span></div>
         </div>
       </section>
 
@@ -99,7 +101,7 @@ export default function Home() {
       <section className="work-section shell" id="work">
         <div className="section-heading">
           <div><span className="section-number">02</span><h2>Selected product work</h2></div>
-          <p>Sanitized case studies showing the decisions, trade-offs, and operating systems behind the outcomes.</p>
+          <p>Enterprise and independent product work: the customer problem, my contribution, the decisions, and the evidence.</p>
         </div>
         <div className="case-grid">
           <article className="case-card case-blue">
@@ -121,7 +123,7 @@ export default function Home() {
               <div className="code-window"><span /><b>Build once.</b><b>Deploy safely.</b><i>Earn adoption.</i></div>
             </div>
             <div className="case-copy">
-              <span className="outcome-chip">$6M+ annual savings</span>
+              <span className="outcome-chip">$6M cost-avoidance opportunity</span>
               <h3>Making the safest path the fastest path</h3>
               <p>Productized provisioning through templates, APIs, and visible guardrails—reducing manual work without hiding operational risk.</p>
               <a href="/work/platform-automation">See decisions and trade-offs <Arrow /></a>
@@ -134,23 +136,38 @@ export default function Home() {
               <small>invalid billing</small>
             </div>
             <div className="case-copy">
-              <span className="outcome-chip">~$2M contract savings enabled</span>
+              <span className="outcome-chip">52% reduction in invalid billing</span>
               <h3>Turning telemetry into decisions leaders could act on</h3>
               <p>Built usage, observability, and chargeback capabilities around real financial and lifecycle decisions—not dashboard volume.</p>
               <a href="/work/usage-intelligence">See decisions and trade-offs <Arrow /></a>
             </div>
           </article>
           <article className="case-card case-orange">
-            <div className="case-meta"><span>Independent build</span><span>Consumer fintech</span></div>
+            <div className="case-meta"><span>Independent build</span><span>Consumer intelligence</span></div>
             <div className="case-visual bill-visual" aria-hidden="true">
-              <div className="bill-paper"><small>BILL INTELLIGENCE</small><b>Was your<br />bill fair?</b><span>Evidence → action</span></div>
+              <div className="bill-paper"><small>BILL INTELLIGENCE</small><b>Your receipts.<br />Useful insights.</b><span>Evidence → action</span></div>
             </div>
             <div className="case-copy">
-              <span className="outcome-chip">Web · Mobile · Backend</span>
-              <h3>Narrowing a broad toolkit to one customer promise</h3>
-              <p>Focused an independent consumer product on evidence-led bill intelligence and aligned product, trust, data, and experience around one job to be done.</p>
+              <span className="outcome-chip">Web · AI · Backend</span>
+              <h3>Turning receipts into local price intelligence</h3>
+              <p>Built an AI-assisted consumer product that turns receipts into spending records and community price observations, with clear data provenance and privacy boundaries.</p>
               <a href="/work/consumer-intelligence">See decisions and trade-offs <Arrow /></a>
             </div>
+          </article>
+        </div>
+        <h3 className="more-work-heading">More work across platforms and AI</h3>
+        <div className="case-grid more-work-grid">
+          <article className="case-card case-blue case-card-compact">
+            <div className="case-meta"><span>Enterprise platform</span><span>05</span></div>
+            <div className="case-copy"><span className="outcome-chip">Internal enterprise applications</span><h3>Owning the move from virtual machines to a modern application platform.</h3><p>Product ownership for migrating internal applications from on-premises virtual machines to OpenShift and Kubernetes.</p><a href="/work/cloud-modernization">Explore this work <Arrow /></a></div>
+          </article>
+          <article className="case-card case-lime case-card-compact">
+            <div className="case-meta"><span>Independent build</span><span>06</span></div>
+            <div className="case-copy"><span className="outcome-chip">AI-powered educational content</span><h3>Building personalized learning with generative AI.</h3><p>An independent AI-powered learning platform using generative AI to produce personalized educational content.</p><a href="/work/ai-learning">Explore this work <Arrow /></a></div>
+          </article>
+          <article className="case-card case-paper case-card-compact">
+            <div className="case-meta"><span>Independent build</span><span>07</span></div>
+            <div className="case-copy"><span className="outcome-chip">Structured catalog · Reviews · Search</span><h3>Making AI tools easier to evaluate.</h3><p>A structured discovery product for comparing AI tools through use cases, pricing, editorial information, and moderated reviews.</p><a href="/work/ai-discovery">Explore this work <Arrow /></a></div>
           </article>
         </div>
       </section>
@@ -177,11 +194,11 @@ export default function Home() {
         </div>
         <div className="experience-list">
           <article className="experience-featured">
-            <div className="experience-when">2022—Now</div><div><h3>Wells Fargo</h3><p className="experience-role">L2 Product Owner · Lead Infrastructure Engineer</p><p>Own strategy, roadmap, modernization, and lifecycle execution for enterprise communications. Lead through influence across global teams and regulated banking stakeholders.</p></div><div className="experience-tags"><span>Platform strategy</span><span>AI &amp; automation</span><span>Data products</span><span>Operating model</span></div>
+            <div className="experience-when">2022—Now</div><div><h3>Wells Fargo</h3><p className="experience-role">Lead Digital Product Manager, VP</p><p>Global product ownership for Enterprise Voice: strategy, six-quarter roadmaps, OKRs, automation, and lifecycle investment. Partner with engineering, business, operations, and risk across a regulated global bank.</p></div><div className="experience-tags"><span>Platform strategy</span><span>AI &amp; automation</span><span>Data products</span><span>Operating model</span></div>
           </article>
-          <article><div className="experience-when">2021</div><div><h3>Birlasoft</h3><p className="experience-role">Technical Specialist · Product Owner for Voice</p></div><p>Improved conferencing experience, cut resource use by 50%+, and led a multi-datacenter platform upgrade.</p></article>
+          <article><div className="experience-when">2021</div><div><h3>Birlasoft</h3><p className="experience-role">Technical Lead</p></div><p>Led a Cisco-to-Webex cloud migration for an insurance client and reduced conferencing costs by 50%.</p></article>
           <article><div className="experience-when">2018—21</div><div><h3>AT&amp;T</h3><p className="experience-role">Technical Specialist</p></div><p>Delivered 20+ global programs and automated site-survey data collection to reduce lead time by 40%.</p></article>
-          <article><div className="experience-when">2016—18</div><div><h3>Cisco</h3><p className="experience-role">Consulting Engineer</p></div><p>Designed and validated collaboration platforms for Tier-1 banks; automated virtual-machine deployment with Python.</p></article>
+          <article><div className="experience-when">2016—18</div><div><h3>Cisco</h3><p className="experience-role">Services Consulting Engineer</p></div><p>Designed and validated collaboration platforms for Tier-1 banks; automated virtual-machine deployment with Python.</p></article>
           <article><div className="experience-when">2011—16</div><div><h3>Dimension Data · TCS</h3><p className="experience-role">Voice engineering · Presales</p></div><p>Built the foundation in incident leadership, solution design, proofs of concept, RFPs, and executive-facing proposals.</p></article>
         </div>
         <a className="text-link" href="/resume">Read the complete résumé <Arrow /></a>
@@ -223,7 +240,7 @@ export default function Home() {
           <h2 id="opportunity-title">The next product challenge I&apos;m looking for.</h2>
         </div>
         <div className="opportunity-copy">
-          <p>Senior or lead Product Manager roles where enterprise platforms, AI-powered operations, customer experience, data, and measurable transformation come together.</p>
+          <p>Product leadership opportunities where enterprise platforms, AI automation, customer experience, and measurable transformation come together.</p>
           <dl>
             <div><dt>Best fit</dt><dd>Enterprise SaaS · Fintech &amp; banking · Platform products · AI automation</dd></div>
             <div><dt>Working style</dt><dd>Bengaluru · India hybrid or remote · Global teams</dd></div>

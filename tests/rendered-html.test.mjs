@@ -18,8 +18,8 @@ test("server-renders a positioned and discoverable product portfolio", async () 
   const html = await response.text();
   assert.match(html, /Aman Sinha/);
   assert.match(html, /<h1 class="name-heading"><span>Aman Sinha/);
-  assert.match(html, /Product clarity for systems/);
-  assert.match(html, /Senior product manager and platform product leader/i);
+  assert.match(html, /Measurable product impact/);
+  assert.match(html, /Lead Digital Product Manager, VP/);
   assert.match(html, /Selected product work/);
   assert.match(html, /Product notes/);
   assert.match(html, /\$8M\+/);
@@ -44,8 +44,8 @@ test("renders independently shareable case-study metadata", async () => {
   const secondResponse = await render("/work/consumer-intelligence");
   assert.equal(secondResponse.status, 200);
   const secondHtml = await secondResponse.text();
-  assert.match(secondHtml, /broad AI toolkit to one sharp customer promise/);
-  assert.match(secondHtml, /Web · Mobile · Backend/);
+  assert.match(secondHtml, /Turning receipts into useful local price intelligence/);
+  assert.match(secondHtml, /Web · AI · Backend/);
   assert.match(secondHtml, /consumer trust/i);
   assert.match(secondHtml, /og:title/);
   assert.doesNotMatch(secondHtml, /og\.png/);
@@ -57,9 +57,31 @@ test("renders the printable resume", async () => {
   const html = await response.text();
   assert.match(html, /Résumé/);
   assert.match(html, /Wells Fargo/);
+  assert.match(html, /Lead Digital Product Manager, VP/);
+  assert.doesNotMatch(html, /Lead Infrastructure Engineer|annual savings/);
   assert.match(html, /IIM Calcutta/);
   assert.match(html, /rel="canonical" href="https:\/\/amansinha\.me\/resume"/);
   assert.doesNotMatch(html, /63634 36673/);
+});
+
+test("publishes all case studies with private project identities", async () => {
+  const paths = ["/", "/resume", "/work/enterprise-voice", "/work/platform-automation", "/work/usage-intelligence", "/work/consumer-intelligence", "/work/cloud-modernization", "/work/ai-learning", "/work/ai-discovery", "/insights", "/insights/platform-product-decisions", "/insights/internal-product-adoption", "/insights/automation-human-judgment"];
+  for (const path of paths) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert.doesNotMatch(html, /https:\/\/github\.com\/amasin/, path);
+    for (const [, href] of html.matchAll(/href="([^"]+)"/g)) {
+      if (!href.startsWith("https://") && !href.startsWith("http://")) continue;
+      assert.ok(["amansinha.me", "www.linkedin.com"].includes(new URL(href).hostname), `Unexpected external destination on ${path}`);
+    }
+    if (path.startsWith("/work/")) {
+      assert.match(html, /My contribution/);
+      assert.match(html, /rel="canonical"/);
+    }
+  }
+  const sitemap = await (await render("/sitemap.xml")).text();
+  for (const path of paths.filter(path => path.startsWith("/work/"))) assert.ok(sitemap.includes(`https://amansinha.me${path}`), path);
 });
 
 test("renders product insights with independent article metadata", async () => {
