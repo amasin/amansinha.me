@@ -63,7 +63,7 @@ export function CaseStudyPage({ study }: { study: CaseStudy }) {
             <div className="decision-list">{study.decisions.map((decision, i) => <article key={decision.title}><b>0{i + 1}</b><div><h2>{decision.title}</h2><p>{decision.detail}</p></div></article>)}</div>
           </div>
           <div className="study-section"><span className="study-label">The trade-off</span><p className="study-lead">{study.tradeoff}</p></div>
-          <div className="study-section"><span className="study-label">How success was measured</span><p className="study-lead">{study.measurement}</p></div>
+          <div className="study-section"><span className="study-label">Success measures</span><p className="study-lead">{study.measurement}</p></div>
         </section>
 
         <section className="outcomes-band">

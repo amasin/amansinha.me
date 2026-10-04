@@ -400,3 +400,12 @@ footer { background: var(--ink); color: white; }
   .footer-grid > div { justify-self: start; flex-wrap: wrap; }
 }
 
+
+.more-work-heading { margin: 56px 0 24px; font: 600 26px/1.2 var(--font-geist-sans), sans-serif; letter-spacing: -.035em; }
+.more-work-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.case-card-compact .case-copy { padding-top: 8px; }
+.case-card-compact .case-copy h3 { font-size: 25px; }
+.case-card-compact .case-copy p { min-height: 0; }
+.case-card-compact .case-meta { flex-wrap: wrap; gap: 12px; }
+.hero-role { line-height: 1.6; }
+@media (max-width: 900px) { .more-work-grid { grid-template-columns: 1fr; } }

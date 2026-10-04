@@ -1,6 +1,6 @@
 # Aman Sinha
 
-> Senior product and platform leader in Bengaluru focused on enterprise platforms, AI-powered automation, data products, and customer experience.
+> Aman Sinha is a Lead Digital Product Manager, VP at Wells Fargo in Bengaluru, focused on enterprise platforms, AI automation, and measurable product impact.
 
 Aman Sinha has 15+ years across product ownership, platform strategy, engineering, consulting, presales, and enterprise transformation. His portfolio documents work at global scale, including products supporting 200K+ endpoints, 34M+ monthly voice minutes, 100+ engineers across eight teams, and $8M+ in efficiencies and cost avoidance.
 
@@ -17,11 +17,16 @@ Aman Sinha has 15+ years across product ownership, platform strategy, engineerin
 - [Usage intelligence](https://amansinha.me/work/usage-intelligence): Data products for platform economics and lifecycle decisions.
 - [Consumer bill intelligence](https://amansinha.me/work/consumer-intelligence): Independent consumer bill-intelligence product strategy.
 
+- [Cloud modernization](https://amansinha.me/work/cloud-modernization): Product ownership for migrating internal applications from on-premises virtual machines to OpenShift and Kubernetes.
+- [Generative AI learning](https://amansinha.me/work/ai-learning): An independent AI-powered learning platform using generative AI to produce personalized educational content.
+- [AI discovery](https://amansinha.me/work/ai-discovery): A structured discovery product for comparing AI tools through use cases, pricing, editorial information, and moderated reviews.
+
 ## Contact and profiles
 
 - Email: aman.ismu@gmail.com
 - LinkedIn: https://www.linkedin.com/in/amansin
-- GitHub: https://github.com/amasin
 
 Case studies concerning employer work are intentionally sanitized. Operational details are generalized and figures may be rounded to respect confidentiality.
 
+
+Independent project identities and URLs are private. Scope descriptions are not claims of commercial traction. The automation cost-avoidance opportunity is not realized annual savings.
