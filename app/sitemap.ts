@@ -2,9 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://amansinha.me";
-  const updated = new Date("2026-10-04T00:00:00+05:30");
+  const updated = new Date("2026-11-06T00:00:00+05:30");
   const routes = [
     { path: "", changeFrequency: "monthly" as const, priority: 1 },
+    { path: "/lab", changeFrequency: "monthly" as const, priority: .95 },
     { path: "/resume", changeFrequency: "monthly" as const, priority: .9 },
     { path: "/insights", changeFrequency: "monthly" as const, priority: .9 },
     { path: "/work/enterprise-voice", changeFrequency: "yearly" as const, priority: .85 },

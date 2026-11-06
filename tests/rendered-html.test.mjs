@@ -17,8 +17,8 @@ test("server-renders a positioned and discoverable product portfolio", async () 
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Aman Sinha/);
-  assert.match(html, /<h1 class="name-heading"><span>Aman Sinha/);
-  assert.match(html, /Measurable product impact/);
+  assert.match(html, /I make complex/);
+  assert.match(html, /products/);
   assert.match(html, /Lead Digital Product Manager, VP/);
   assert.match(html, /Selected product work/);
   assert.match(html, /Product notes/);
@@ -65,7 +65,7 @@ test("renders the printable resume", async () => {
 });
 
 test("publishes all case studies with private project identities", async () => {
-  const paths = ["/", "/resume", "/work/enterprise-voice", "/work/platform-automation", "/work/usage-intelligence", "/work/consumer-intelligence", "/work/cloud-modernization", "/work/ai-learning", "/work/ai-discovery", "/insights", "/insights/platform-product-decisions", "/insights/internal-product-adoption", "/insights/automation-human-judgment"];
+  const paths = ["/", "/lab", "/resume", "/work/enterprise-voice", "/work/platform-automation", "/work/usage-intelligence", "/work/consumer-intelligence", "/work/cloud-modernization", "/work/ai-learning", "/work/ai-discovery", "/insights", "/insights/platform-product-decisions", "/insights/internal-product-adoption", "/insights/automation-human-judgment"];
   for (const path of paths) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
@@ -125,3 +125,17 @@ test("redirects insecure and www production requests to the canonical domain", a
   assert.equal(wwwResponse.headers.get("location"), "https://amansinha.me/resume");
 });
 
+
+
+test("renders an interactive decision lab with an explicit fictional-data disclosure", async () => {
+  const response = await render("/lab");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /What deserves to/);
+  assert.match(html, /Fictional scenario/);
+  assert.match(html, /Choose your priorities/);
+  assert.match(html, /Usage intelligence/);
+  assert.match(html, /rel="canonical" href="https:\/\/amansinha\.me\/lab"/);
+  const sitemap = await (await render("/sitemap.xml")).text();
+  assert.match(sitemap, /https:\/\/amansinha\.me\/lab/);
+});
