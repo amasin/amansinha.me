@@ -1,7 +1,5 @@
 import Link from "next/link";
-
 const Arrow = () => <span aria-hidden="true">↗</span>;
-
 export function SiteHeader({ compact = false }: { compact?: boolean }) {
   return (
     <header className={`site-header shell${compact ? " site-header-compact" : ""}`}>
@@ -9,16 +7,13 @@ export function SiteHeader({ compact = false }: { compact?: boolean }) {
         <span className="wordmark-full">Aman Sinha</span><span className="wordmark-short" aria-hidden="true">AS</span><span className="wordmark-dot">.</span>
       </Link>
       <nav aria-label="Primary navigation">
-        <Link href="/#work">Work</Link>
-        <Link className="nav-secondary" href="/#principles">Principles</Link>
-        <Link className="nav-secondary" href="/#experience">Experience</Link>
+        <Link href="/#selected-work">Work</Link>
+        <Link href="/lab">Decision Lab</Link>
+        <Link className="nav-secondary" href="/#principles">Approach</Link>
         <Link href="/insights">Insights</Link>
         <Link href="/resume">Résumé</Link>
       </nav>
-      <a className="header-cta" href="mailto:aman.ismu@gmail.com">
-        Contact <Arrow />
-      </a>
+      <a className="header-cta" href="mailto:aman.ismu@gmail.com">Contact <Arrow /></a>
     </header>
   );
 }
-

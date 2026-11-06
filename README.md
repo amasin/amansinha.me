@@ -4,8 +4,8 @@ Professional product-management portfolio for Aman Sinha. The site presents meas
 
 ## What is included
 
-- Outcome-led portfolio homepage
-- Seven product case studies with route-specific social metadata
+- Thesis-led leadership homepage focused on judgment, choices, and evidence
+- Interactive fictional product prioritization decision lab at /lab with transparent weights and scores\n- Seven product case studies with route-specific social metadata
 - Three original Product Notes and an Insights hub for ongoing authority building
 - Detailed, print-friendly résumé
 - Responsive and accessible layout
@@ -52,7 +52,7 @@ After the first deployment, attach `amansinha.me` as the Worker custom domain in
 
 ## Main content locations
 
-- `app/page.tsx` — portfolio homepage
+- `app/page.tsx` — leadership homepage\n- `app/lab/DecisionLab.tsx` — interactive product decision workbench\n- `app/portfolio.css` — redesigned responsive visual system
 - `app/work/case-studies.ts` — authoritative case-study content
 - `app/insights/insights.ts` — authoritative Product Notes content
 - `app/resume/page.tsx` — résumé
